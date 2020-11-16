@@ -56,6 +56,7 @@ export default class CreditCardInput extends Component {
     invalidColor: PropTypes.string,
     placeholderColor: PropTypes.string,
 
+    cardStyle: PropTypes.object,
     cardImageFront: PropTypes.number,
     cardImageBack: PropTypes.number,
     cardScale: PropTypes.number,
@@ -146,7 +147,7 @@ export default class CreditCardInput extends Component {
       cardImageFront, cardImageBack, inputContainerStyle,
       values: { number, expiry, cvc, name, type }, focused,
       allowScroll, requiresName, requiresCVC, requiresPostalCode,
-      cardScale, cardFontFamily, cardBrandIcons,
+      cardScale, cardStyle, cardFontFamily, cardBrandIcons,
     } = this.props;
 
     return (
@@ -154,6 +155,7 @@ export default class CreditCardInput extends Component {
         <CreditCard focused={focused}
           brand={type}
           scale={cardScale}
+          cardStyle={cardStyle}
           fontFamily={cardFontFamily}
           imageFront={cardImageFront}
           imageBack={cardImageBack}
